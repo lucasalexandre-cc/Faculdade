@@ -1,0 +1,20 @@
+<!--
+As the user types in the search box, a keyup event binding calls the component's search method with the new
+search box value. The *ngFor repeats aluno objects from the component's alunos property. No surprise there.
+But, as we'll soon see, the alunos property is now an Observable of aluno arrays, rather than just a aluno
+array. The *ngFor can't do anything with an Observable until we flow it through the async pipe (AsyncPipe).
+The async pipe subscribes to the Observable and produces the array of alunos to *ngFor.
+-->
+
+<div id="search-component">
+    <h4>Pesquisa de Aluno</h4>
+    <div class="form-group form-group-sm">
+        <input #searchBox id="search-box" (keyup)="search(searchBox.value)" class="form-control">
+    </div>
+    <div class="cx">
+        <div *ngFor="let aluno of alunos | async"
+             (click)="gotoAluno(aluno)" class="search-result" >
+            {{aluno.nome}}
+        </div>
+    </div>
+</div>

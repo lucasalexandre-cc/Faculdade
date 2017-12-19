@@ -1,0 +1,20 @@
+.search-result{
+    border-bottom: 1px solid gray;
+    border-left: 1px solid gray;
+    border-right: 1px solid gray;
+    width:245px;
+    height: 22px;
+    padding: 0px 5px 5px 5px;
+    background-color: white;
+    cursor: pointer;
+}
+div.cx {
+    margin-bottom: 15px;
+}
+#search-box{
+    width: 250px;
+    height: 22px;
+}
+.form-group {
+    margin-bottom: 0px;
+}

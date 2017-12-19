@@ -1,0 +1,67 @@
+<nav class="navbar navbar-inverse">
+   <div class="container">
+      <div class="navbar-header">
+         <a class="navbar-brand" routerLink="/home" routerLinkActive="active">Mengão</a>
+         <button class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+         </button>
+      </div>
+      <div class="collapse navbar-collapse" id="navbar">
+         <ul class="nav navbar-nav">
+            <li>
+               <a routerLink="/home" routerLinkActive="active">
+                  <span class="glyphicon glyphicon-home"></span> Home
+               </a>
+            </li>
+
+            <li class="dropdown">
+               <a class="dropdown-toggle" data-toggle="dropdown" routerLinkActive="active">
+                  <span class="glyphicon glyphicon-user"></span> Alunos <span class="caret"></span>
+               </a>
+               <ul class="dropdown-menu">
+                  <li>
+                     <a routerLink="/alunos/cadastrar">
+                         <span class="glyphicon glyphicon-save"></span> Cadastrar
+                     </a>
+                  </li>
+                  <li>
+                     <a routerLink="/alunos/exibirtodos">
+                         <span class="glyphicon glyphicon-search"></span> Buscar
+                     </a>
+                  </li>
+               </ul>
+            </li>
+
+            <li>
+               <a routerLink="/quemsomos" routerLinkActive="active">
+                   <span class="glyphicon glyphicon-comment"></span> Quem Somos
+               </a>
+            </li>
+         </ul>
+         <ul class="nav navbar-nav navbar-right">
+            <li>
+               <a routerLink="/signup" routerLinkActive="active">
+                   <span class="glyphicon glyphicon-user"></span> Sign Up
+               </a>
+            </li>
+            <li>
+               <a routerLink="/login" routerLinkActive="active">
+                   <span class="glyphicon glyphicon-log-in"></span> Login
+               </a>
+            </li>
+         </ul>
+      </div>
+   </div>
+</nav>
+
+<div class="container">
+   <router-outlet></router-outlet>
+</div>
+
+<div class="footer text-center">
+   Copyright © 2016, Todos os direitos reservados.<br/>
+   Imagens: Designed by Freepik and distributed by Flaticon.
+</div>
+

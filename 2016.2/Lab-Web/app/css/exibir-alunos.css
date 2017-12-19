@@ -1,0 +1,94 @@
+@media screen and (min-width: 600px) {
+   .titulo {
+      font-size: 32px;
+   }
+   .media img {
+      width: 160px;
+      margin-bottom: 15px;
+   }
+   .media-body {
+      font-size: 13px;
+   }
+   .media-body .cabecalho {
+      font-size: 20px;
+   }
+   h2, .h2 {
+      font-size: 30px;
+   }
+}
+
+@media screen and (max-width: 599px) {
+  .titulo {
+     font-size: 20px;
+  }
+  .media img {
+     width: 120px;
+     margin-bottom: 15px;
+  }
+  .media-body {
+     font-size: 12px;
+  }
+  .media-body .cabecalho {
+     font-size: 18px;
+  }
+  h2, .h2 {
+     font-size: 22px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .titulo {
+     font-size: 18px;
+  }
+  .media img {
+     width: 90px;
+  }
+  .media-body {
+     font-size: 12px;
+  }
+  .media-body .cabecalho {
+     font-size: 17px;
+     margin-top: 10px;
+  }
+  .media-body .info2 {
+     display: none;
+  }
+  h2, .h2 {
+     font-size: 20px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .titulo {
+     font-size: 16px;
+  }
+  .media img {
+     width: 50px;
+  }
+  .media-body {
+     font-size: 12px;
+  }
+  .media-body .cabecalho {
+     font-size: 16px;
+     margin-top: 10px;
+  }
+  .media-body .info1 {
+     display: none;
+  }
+  .media-body .info2 {
+     display: none;
+  }
+}
+
+.formatoImagem {
+   border-radius: 50%;
+}
+
+button.delete {
+    float:right;
+    margin-top: 0px;
+    margin-right: .8em;
+    background-color: gray !important;
+    color:white;
+    font-size: 14px;
+}

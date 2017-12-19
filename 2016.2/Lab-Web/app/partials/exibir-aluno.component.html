@@ -1,0 +1,168 @@
+<img class="media-object formatoImagem" src="app/images/jpg/mengao5.jpg">
+<h2 class="text-center">Cadastro de Sócios</h2>
+<!-- Adicionar  -->
+<h4 id="mensagem" class="text-center" [style.color]="getCor()" [style.visibility]="getVisibilidade()">{{mensagem}}</h4>
+<!-- Fim adicionar  -->
+<div class="container">
+   <div class="row">
+      <div class="col-xs-12">
+         <div *ngIf="aluno">
+            <div class="media-list">
+               <div class="row">
+                  <div class="col-xs-12">
+                     <div class="media">
+                        <div class="media-left">
+                           <img class="media-object formatoImagem" src="app/images/png/{{aluno.foto}}"
+                                alt="{{aluno.nome}}">
+                        </div>
+                        <div class="media-body">
+                           <form [formGroup]="usuarioGroup" class="form-horizontal" (ngSubmit)="onSubmit(usuarioGroup.valid)" novalidate>
+                              <fieldset [disabled]="isDesabilitado">
+                                 <legend>Inf. Básicas</legend>
+
+                                 <div class="form-group form-group-sm">
+                                    <label class="col-sm-2 control-label" for="nome">Nome</label>
+                                    <div class="col-sm-9">
+                                       <input formControlName="nome" name="nome" class="form-control" placeholder="Informe seu nome" id="nome" required>
+                                    </div>
+                                    <div class="col-sm-1"></div>
+                                    <div *ngIf="formErrors.nome && submitted" class="alert alert-danger">
+                                       {{ formErrors.nome }}
+                                    </div>
+                                 </div>
+
+
+
+
+                                 <div class="form-group form-group-sm">
+                                    <label class="col-sm-2 control-label" for="cpf">CPF</label>
+                                    <div class="col-sm-9">
+                                       <input formControlName="cpf" name="cpf" class="form-control" placeholder="Informe seu cpf" id="cpf" required>
+                                    </div>
+                                    <div class="col-sm-1"></div>
+                                    <div *ngIf="formErrors.cpf && submitted" class="alert alert-danger">
+                                       {{ formErrors.cpf }}
+                                    </div>
+                                 </div>
+
+
+                                 <div class="form-group form-group-sm">
+                                    <label class="control-label col-sm-2">Sexo</label>
+                                    <div class="col-sm-10">
+                                       <input type="radio" formControlName="sexo" name="sexo" value="M"> Masculino
+                                    </div>
+                                    <div class="col-sm-10 col-sm-offset-2">
+                                       <input type="radio" formControlName="sexo" name="sexo" value="F"> Feminino
+                                       &nbsp;&nbsp;
+                                    </div>
+                                 </div>
+
+
+
+
+                                 <div class="form-group form-group-sm">
+                                    <label class="col-sm-2 control-label" for="cartao">Cartão</label>
+                                    <div class="col-sm-9">
+                                       <input formControlName="cartao" name="cartao" class="form-control" placeholder="Informe seu cartão" id="cartao" required>
+                                    </div>
+                                    <div class="col-sm-1"></div>
+                                    <div *ngIf="formErrors.cartao && submitted" class="alert alert-danger">
+                                       {{ formErrors.cartao }}
+                                    </div>
+                                 </div>
+
+
+                                 <div class="form-group form-group-sm">
+                                    <label class="control-label col-xs-12 col-sm-2" for="telefone">Telefone</label>
+                                    <div class="col-xs-9 col-sm-3">
+                                       <input formControlName="telefone" name="telefone" class="form-control" placeholder="Informe seu telefone" id="telefone">
+                                    </div>
+                                    <div class="col-xs-3 col-sm-7"></div>
+                                 </div>
+
+
+
+                                 <div class="form-group form-group-sm">
+                                    <label class="col-sm-2 control-label" for="email">Email</label>
+                                    <div class="col-sm-9">
+                                       <input formControlName="email" name="email" class="form-control" placeholder="Informe seu email" id="email" required>
+                                    </div>
+                                    <div class="col-sm-1"></div>
+                                    <div *ngIf="formErrors.email && submitted" class="alert alert-danger">
+                                       {{ formErrors.email }}
+                                    </div>
+                                 </div>
+
+
+
+                              </fieldset>
+                              <br/>
+                              <fieldset [disabled]="isDesabilitado">
+                                 <legend>Endereço</legend>
+                                 <div class="form-group form-group-sm">
+                                    <label class="col-sm-2 control-label" for="endereco">Endereço</label>
+                                    <div class="col-sm-9">
+                                       <input formControlName="endereco" name="endereco" class="form-control"
+                                              type="text"
+                                              id="endereco"
+                                              placeholder="Informe seu endereco">
+                                    </div>
+                                    <div class="col-sm-1"></div>
+                                 </div>
+
+                                 <div class="form-group form-group-sm">
+                                    <label class="col-sm-2 control-label" for="bairro">Bairro</label>
+                                    <div class="col-sm-9">
+                                       <input formControlName="bairro" name="bairro" class="form-control" type="text"
+                                              id="bairro" placeholder="Informe seu bairro">
+                                    </div>
+                                    <div class="col-sm-1"></div>
+                                 </div>
+
+                                 <div class="form-group form-group-sm">
+                                    <label class="col-sm-2 control-label" for="cidade">Cidade</label>
+                                    <div class="col-sm-9">
+                                       <input formControlName="cidade" name="cidade" class="form-control" type="text"
+                                              id="cidade" placeholder="Informe sua cidade">
+                                    </div>
+                                    <div class="col-sm-1"></div>
+                                 </div>
+
+                                 <div class="form-group form-group-sm">
+                                    <label class="col-xs-12 col-sm-2 control-label" for="estado">Estado</label>
+                                    <div class="col-xs-5 col-sm-2">
+                                       <input formControlName="estado" name="estado" class="form-control" type="text"
+                                              id="estado" placeholder="Informe seu estado">
+                                    </div>
+                                    <div class="col-xs-7 col-sm-8"></div>
+                                 </div>
+                              </fieldset>
+                           </form>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="wrapper">
+               <!-- Adicionar  -->
+               <button *ngIf="exibirEditar" class="btn btn-primary" (click)="editavel()">
+                  <span class="glyphicon glyphicon-edit"></span> Editar
+               </button>
+               <button *ngIf="exibirAlterar"  class="btn btn-primary" [disabled]="!usuarioGroup.valid"  (click)="alterar(usuarioGroup.value)">
+                  <span class="glyphicon glyphicon-save"></span> Alterar
+               </button>
+               <button *ngIf="exibirCadastrar"  class="btn btn-primary"  [disabled]="!usuarioGroup.valid" (click)="cadastrar(usuarioGroup.value)">
+                  <span class="glyphicon glyphicon-save"></span> Salvar
+               </button>
+               <!-- Fim adicionar  -->
+               <button class="btn btn-warning" (click)="voltar()">
+                  <span class="glyphicon glyphicon-backward"></span> Voltar
+               </button>
+            </div>
+            <br/>
+            <br/>
+            <br/>
+         </div>
+      </div>
+   </div>
+</div>

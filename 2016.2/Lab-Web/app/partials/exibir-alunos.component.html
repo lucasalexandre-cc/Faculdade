@@ -1,0 +1,35 @@
+<h2 class="text-center">Sócios do Clube</h2>
+
+<aluno-search></aluno-search>
+
+<ul class="media-list">
+   <div class="row">
+      <div class="col-xs-12" *ngFor="let aluno of alunos">
+         <li class="media" (click)="gotoAluno(aluno)">
+            <div class="media-left">
+               <img class="media-object formatoImagem" src="app/images/png/{{aluno.foto}}"
+                    alt="{{aluno.nome}}">
+            </div>
+            <div class="media-body">
+               <h3 class="cabecalho">
+                  {{aluno.nome}}
+                  <button class="delete" (click)="remover(aluno); $event.stopPropagation()">x</button>
+                  <!--           In addition to calling the component's delete method, the delete button click handling code stops
+                                 the propagation of the click event — we don't want the <li> click handler to be triggered because
+                                 that would select the aluno that we are going to delete!
+                  -->
+               </h3>
+
+               <div class="info1"><b>Endereço:</b> {{aluno.endereco}}<br/></div>
+               <div class="info2"><b>Bairro:</b> {{aluno.bairro}}<br/></div>
+               <div class="info2"><b>Cidade:</b> {{aluno.cidade}}&nbsp;&nbsp;<b>-&nbsp;&nbsp;Estado:</b> {{aluno.estado}}<br/></div>
+               <div class="info1"><b>Telefone:</b> {{aluno.telefone}}</div>
+               <div class="info1"><b>CPF:</b> {{aluno.cpf}}</div>
+               <div class="info1"><b>Email:</b> {{aluno.email}}</div>
+            </div>
+         </li>
+      </div>
+   </div>
+</ul>
+
+<p *ngIf="erroAlunos"><b>Deu erro ao recuperar alunos:</b> {{erroAlunos}}</p>

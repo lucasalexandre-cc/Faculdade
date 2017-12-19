@@ -1,0 +1,18 @@
+1. Criar:
+
+a) o componente PesquisaDeAlunoComponent
+b) a classe PesquisaDeAlunoService
+c) a página pesquisa-de-aluno-component.html
+d) o arquivo pesquisa-de-aluno-component.css
+
+
+2. Acrescentar o elemento abaixo na linha 2 de exibir-alunos-component.html
+
+<aluno-search></aluno-search>
+
+
+3. Acrescentar o componente PesquisaDeAlunoComponent ao array de declarations de NgModule:
+
+    declarations: [ ..., PesquisaDeAlunoComponent ],
+
+
