@@ -48,3 +48,10 @@ obs: deveres feitos em Java. Lista com as questes contidas em suas respectivas p
 #### Sistemas Operacionais
 - T01: criando processos e threads básicos, apenas para se familiarizar com o conceito.
 - T02: variante do famoso algoritmo do barbeiro. Agora temos 3 tipos de barbeiro (corta cabelo, pinta cabelo e faz barba), e 3 tipos de clientes. Usando semáforo para gerenciá-los.
+
+## 2018.1 (5 Semestre)
+
+#### Análise e Projeto de Algoritmos
+- T01: implementar Selection Sort, Insertion Sort e Merge Sort. Desenvolver um relatório sobre a complexidade e o resultado dos testes.
+- T02: dado um vetor de inteiros de tamanho n e deve-se encontrar o sub-vetor cujos elementos possuem a menor soma. Nesse trabalho você deve implementar em C dois tipos de algoritmos que resolvem esse problema e compará-los. Sua funções podem ser recursivas ou iterativas mas uma deve obrigatoriamente ser projetada por Força Bruta e outra por Programação Dinâmica. 
+- T03: Subset Sum é um dos princiapis problemas NP-completo conhecidos, sendo importante para diversas áreas como a criptografia. Ele é definido por: dado um vetor de inteiros de tamanho n e um inteiro s, deve-se encontrar um sub-vetor não vazio cuja soma dos elementos é exatamente s. Nesse trabalho você deve implementar em C dois tipos de algoritmos que resolvem esse problema e compará-los. A comparação deve ser feita detalhadamente com relação a tipo de projeto utilizada, complexidade de tempo, complexidade de espaço, corretude e qualquer outra característica que você achar relevante.  
